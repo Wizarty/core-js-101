@@ -127,10 +127,7 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) { /* eslint consistent-return: off */
-  if (str.match(value)) {
-    const str1 = str.replace(value, '');
-    return str1;
-  }return str
+  }return str.replace(value, '');
 }
 
 /**
