@@ -126,8 +126,8 @@ function repeatString(value, count) {
  *   'I like legends', 'end' => 'I like legs',
  *   'ABABAB','BA' => 'ABAB'
  */
-function removeFirstOccurrences(str, value) { /* eslint consistent-return: off */
-  }return str.replace(value, '');
+function removeFirstOccurrences(str, value) 
+  return str.replace(value, '');
 }
 
 /**
