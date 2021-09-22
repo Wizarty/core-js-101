@@ -52,7 +52,7 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (value1 + value2)/2;
+  return (value1 + value2) / 2;
 }
 
 /**
@@ -142,7 +142,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-  return Number(value); 
+  return Number(value);
 }
 
 /**
@@ -180,7 +180,8 @@ function getParallelipidedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    return Number.parseInt(num / Math.pow(10, pow))*(Math.pow(10, pow));
+  const temp = 10 ** pow;
+  return parseInt(num / temp, 10) * temp;
 }
 
 /**
@@ -201,7 +202,8 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  if (n%2!=0) {return true} else {return false}
+  if (n % 2 !== 0) { return true; }
+  return false;
 }
 
 /**
@@ -223,7 +225,7 @@ function toNumber(value, def) {
   if (Number.isNaN(Number(value))) {
     return def;
   }
-  return Number(value); 
+  return Number(value);
 }
 
 module.exports = {

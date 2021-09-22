@@ -19,7 +19,7 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-  return value1 + value2 // value1.concat(value2);
+  return value1 + value2; // value1.concat(value2);
 }
 
 
@@ -66,7 +66,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-  return value.split('Hello, ')
+  return value.split('Hello,');
 }
 
 
@@ -203,10 +203,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-   let t = '┌' + '─'.repeat(width - 2) + '┐\n';
-   let m = '│' + ' '.repeat(width - 2) + '│\n';
-   let b = '└' + '─'.repeat(width - 2) + '┘\n';
-   return t + m.repeat(height - 2) + b;
+  const t = `┌${'─'.repeat(width - 2)}┐\n`;
+  const m = `│${' '.repeat(width - 2)}│\n`;
+  const b = `└${'─'.repeat(width - 2)}┘\n`;
+  return t + m.repeat(height - 2) + b;
 }
 
 
@@ -229,7 +229,7 @@ function getRectangleString(width, height) {
 function encodeToRot13(str) {
   const normal = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
   const rot13 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
-  return str.replace(/[A-Z]/gi, (x) => rot13[normal.indexOf(x)]); 
+  return str.replace(/[A-Z]/gi, (x) => rot13[normal.indexOf(x)]);
 }
 
 /**
@@ -275,10 +275,11 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  const Cards = ['A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
-                 'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
-                 'A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥',
-                 'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠']; 
+  const Cards = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
+    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
+    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
+    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠',
+  ];
   return Cards.indexOf(value);
 }
 
