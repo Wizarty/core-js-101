@@ -54,7 +54,7 @@ function parseDataFromIso8601(value) {
  *    Date(2015,1,1)    => false
  */
 function isLeapYear(date) {
-  //const ydate = new Date(date);
+  // const ydate = new Date(date);
   const year = date.getFullYear();
   return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
 }
@@ -99,13 +99,13 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 function angleBetweenClockHands(date) {
-    const hc = 1000 * 3600 * 12;
-    const mc = 1000 * 3600;
-    const hAng = (360 * (date % hc)) / hc;
-    const mAng = (360 * (date % mc)) / mc;
-    let ang = Math.abs(mAng - hAng);
-    ang = Math.min(ang, 360 - ang);
-    return (ang * Math.PI) / 180;
+  const hc = 1000 * 3600 * 12;
+  const mc = 1000 * 3600;
+  const hAng = (360 * (date % hc)) / hc;
+  const mAng = (360 * (date % mc)) / mc;
+  let ang = Math.abs(mAng - hAng);
+  ang = Math.min(ang, 360 - ang);
+  return (ang * Math.PI) / 180;
 }
 
 
