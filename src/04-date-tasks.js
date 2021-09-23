@@ -104,7 +104,8 @@ function angleBetweenClockHands(date) {
   const hAng = (360 * (date % hc)) / hc;
   const mAng = (360 * (date % mc)) / mc;
   let ang = Math.abs(mAng - hAng);
-  if (ang > 180) ang = 360 - ang;
+  ang = (
+  ang > 180 ? ang === 360 - ang : ang); 
   return (ang * 2 * Math.PI) / 360;
 }
 
